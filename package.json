@@ -24,10 +24,11 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "jokits": "^0.3.5"
   },
   "dependencies": {
-    "jokits": "^0.3.4"
+    
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",
@@ -52,7 +53,8 @@
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "jokits": "^0.3.5"
   },
   "files": [
     "dist"
