@@ -17,6 +17,6 @@
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
+  "include": ["src", ".yalc"],
   "exclude": ["node_modules", "dist", "example"]
 }
