@@ -27,7 +27,7 @@
     "react": "^16.0.0"
   },
   "dependencies": {
-    "jokits": "^0.3.1"
+    "jokits": "^0.3.2"
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",

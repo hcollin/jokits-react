@@ -5,12 +5,7 @@ import { addService, serviceGetState } from './services/services';
 import joki from './joki';
 import { addInterceptor, removeInterceptor } from './interceptors/interceptors';
 import useEvents from './events/useEvents';
-import {
-    JokiConfigs,
-    JokiInstance,
-    JokiInternalApi,
-    JokiServiceApi,
-} from 'jokits/dist/createJoki';
+
 import useSendEvent from './events/useSendEvent';
 import useEventEffect from './events/useEventEffect';
 import useJokiState from './states/useJokiState';
@@ -20,8 +15,19 @@ import {
     getJokiState,
     setJokiState,
 } from './states/stateMachine';
-import { JokiEvent, JokiSubscriber, JokiServiceFactory, JokiMachineState, JokiState } from 'jokits';
-import { JokiInterceptor } from 'jokits';
+import {
+    JokiInstance,
+    JokiInternalApi,
+    JokiServiceApi,
+    JokiEvent,
+    JokiSubscriber,
+    JokiServiceFactory,
+    JokiMachineState,
+    JokiState,
+    JokiInterceptor,
+    JokiService,
+} from 'jokits';
+import { JokiConfigs } from 'jokits/dist/createJoki';
 
 function config(key: keyof JokiConfigs, value: string) {
     joki.config(key, value);
@@ -45,6 +51,7 @@ export {
     getJokiState,
     setJokiState,
     config,
+    JokiConfigs,
     JokiEvent,
     JokiSubscriber,
     JokiServiceFactory,
@@ -54,4 +61,5 @@ export {
     JokiInterceptor,
     JokiInternalApi,
     JokiServiceApi,
+    JokiService,
 };

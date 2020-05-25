@@ -6448,10 +6448,10 @@ jest@24.9.0:
     import-local "^2.0.0"
     jest-cli "^24.9.0"
 
-jokits@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/jokits/-/jokits-0.3.1.tgz#c71b0414bd85b62b5c6607bb9d79f2e4eacad495"
-  integrity sha512-ikwMfIOUpXG+6xtiFEPAOA5WYaI5S2eki2W/i2PWjo7gfrdmR59hpSYVJuZcirwmupgJMmCI4f3U1tj4zIyw+Q==
+jokits@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/jokits/-/jokits-0.3.2.tgz#eafc5ebbb2219ea72d08f49e53dac38a12ad78a9"
+  integrity sha512-ebr2rhgBJbh+dq4sqxdP2VxIT4imjPBpnC9NR01Rcgv0VXbk8yg+eN8EolJbggOFHRaBqAth3uFoEafdxs9bBw==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
