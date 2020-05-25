@@ -3,7 +3,7 @@ import useAtomValue from './atoms/useAtomValue';
 import useService from './services/useService';
 import { addService, serviceGetState } from './services/services';
 import joki from './joki';
-import { addProcessor, removeProcessor } from './processors/processors';
+import { addInterceptor, removeInterceptor } from './interceptors/interceptors';
 import useEvents from './events/useEvents';
 import {
     JokiConfigs,
@@ -20,7 +20,8 @@ import {
     getJokiState,
     setJokiState,
 } from './states/stateMachine';
-import { JokiEvent, JokiSubscriber, JokiServiceFactory, JokiMachineState, JokiState, JokiProcessor } from 'jokits';
+import { JokiEvent, JokiSubscriber, JokiServiceFactory, JokiMachineState, JokiState } from 'jokits';
+import { JokiInterceptor } from 'jokits';
 
 function config(key: keyof JokiConfigs, value: string) {
     joki.config(key, value);
@@ -33,8 +34,8 @@ export {
     useService,
     addService,
     serviceGetState,
-    addProcessor,
-    removeProcessor,
+    addInterceptor,
+    removeInterceptor,
     useEvents,
     useEventEffect,
     useSendEvent,
@@ -50,7 +51,7 @@ export {
     JokiInstance,
     JokiMachineState,
     JokiState,
-    JokiProcessor,
+    JokiInterceptor,
     JokiInternalApi,
     JokiServiceApi,
 };

@@ -1,5 +1,5 @@
-import createJoki from 'jokits';
+import createJoki, { JokiInstance } from 'jokits';
 
-const joki = createJoki({});
+const joki: JokiInstance = createJoki({});
 
 export default joki;

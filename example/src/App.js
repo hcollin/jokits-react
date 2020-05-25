@@ -5,7 +5,7 @@ import {
     useAtomValue,
     useService,
     addService,
-    addProcessor,
+    addInterceptor,
     useEvents,
     useEventEffect,
     addJokiStates,
@@ -72,17 +72,17 @@ function alertProcessor(event, api) {
     return event;
 }
 
-addProcessor({
+addInterceptor({
     action: 'ServiceStateUpdated',
     fn: mapToArrayProcessor,
 });
 
-addProcessor({
+addInterceptor({
     action: 'getServiceState',
     fn: mapToArrayProcessor,
 });
 
-addProcessor({
+addInterceptor({
     fn: alertProcessor,
 });
 
