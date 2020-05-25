@@ -1,6 +1,6 @@
 {
   "name": "jokits-react",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "React frame for JokiTS",
   "author": "Henrik Collin",
   "license": "MIT",
@@ -27,7 +27,7 @@
     "react": "^16.0.0"
   },
   "dependencies": {
-    "jokits": "^0.3.2"
+    "jokits": "^0.3.4"
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",
