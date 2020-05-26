@@ -24,7 +24,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "jokits": "^0.3.5",
+    "jokits": "^0.3.6",
     "react": "^16.0.0"
   },
   "dependencies": {},

@@ -3,7 +3,10 @@ import { useState, useEffect, useCallback } from 'react';
 import { JokiAtom } from 'jokits';
 import joki from '../joki';
 
-export default function useAtom<T>(atomId: string, defaultValue: T) {
+export default function useAtom<T>(
+    atomId: string,
+    defaultValue: T
+): [T, (val: T) => void] {
     const [value, setValue] = useState<T | undefined>(defaultValue);
     const [atom, setAtom] = useState<JokiAtom<T> | null>(null);
 
@@ -26,7 +29,7 @@ export default function useAtom<T>(atomId: string, defaultValue: T) {
     }, [atomId, defaultValue]);
 
     const updateAtomValue = useCallback(
-        (val: T) => {
+        (val: T): void => {
             if (atom !== null) {
                 atom.set(val);
             }
