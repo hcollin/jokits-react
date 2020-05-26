@@ -28,6 +28,7 @@ import {
     JokiService,
 } from 'jokits';
 import { JokiConfigs } from 'jokits/dist/createJoki';
+import { toggleLogging } from './tools/jokitsLogger';
 
 function config(key: keyof JokiConfigs, value: string) {
     joki.config(key, value);
@@ -39,6 +40,7 @@ function trigger(event: JokiEvent) {
 
 export {
     joki,
+    toggleLogging,
     useAtom,
     useAtomValue,
     useService,
