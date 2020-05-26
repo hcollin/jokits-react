@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { JokiAtom } from 'jokits';
 import joki from '../joki';
+import { log, debug } from '../tools/jokitsLogger';
 
 export default function useAtom<T>(
     atomId: string,
@@ -12,40 +13,32 @@ export default function useAtom<T>(
 
     useEffect(() => {
         if (!joki.atom.has(atomId)) {
-            console.log(
-                `jokits-react: useAtom: creating new atom ${atomId} with value ${defaultValue}`
+            debug(
+                `useAtom: creating new atom ${atomId} with value ${defaultValue}`
             );
             joki.atom.set(atomId, defaultValue);
         }
 
         const a: JokiAtom<T> = joki.atom.get<T>(atomId);
         const aVal: T = a.get();
-        console.log(
-            `jokits-react: useAtom: Atom ${atomId} currently has value ${aVal}`
-        );
+        debug(`useAtom: Atom ${atomId} currently has value ${aVal}`);
         setAtom(a);
         setValue(aVal);
 
         const stop = a.subscribe((val: T) => {
-            console.log(
-                `jokits-react: useAtom: ${atomId} value updated to ${val}`
-            );
+            debug(`useAtom: ${atomId} value updated to ${val}`);
             setValue(val);
         });
 
         return () => {
-            console.log(
-                `jokits-react: useAtom: ${atomId} stop listening changes`
-            );
+            debug(`useAtom: ${atomId} stop listening changes`);
             stop();
         };
     }, [atomId, defaultValue]);
 
     const updateAtomValue = useCallback(
         (val: T): void => {
-            console.log(
-                `jokits-react: useAtom: ${atomId} update atom value to ${val} by callback`
-            );
+            debug(`useAtom: ${atomId} update atom value to ${val} by callback`);
             if (atom !== null) {
                 atom.set(val);
             }
