@@ -4,7 +4,7 @@ import { JokiAtom } from 'jokits';
 import joki from '../joki';
 
 export default function useAtomValue<T>(atomId: string, defaultValue: T) {
-    const [value, setValue] = useState<T | undefined>(defaultValue);
+    const [value, setValue] = useState<T>(defaultValue);
 
     useEffect(() => {
         if (!joki.atom.has(atomId)) {

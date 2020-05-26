@@ -7,7 +7,7 @@ export default function useAtom<T>(
     atomId: string,
     defaultValue: T
 ): [T | undefined, (val: T) => void] {
-    const [value, setValue] = useState<T | undefined>(defaultValue);
+    const [value, setValue] = useState<T>(defaultValue);
     const [atom, setAtom] = useState<JokiAtom<T> | null>(null);
 
     useEffect(() => {
