@@ -33,6 +33,10 @@ function config(key: keyof JokiConfigs, value: string) {
     joki.config(key, value);
 }
 
+function trigger(event: JokiEvent) {
+    joki.trigger(event);
+}
+
 export {
     joki,
     useAtom,
@@ -51,6 +55,7 @@ export {
     getJokiState,
     setJokiState,
     config,
+    trigger,
     JokiConfigs,
     JokiEvent,
     JokiSubscriber,
