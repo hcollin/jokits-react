@@ -2,7 +2,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { JokiAtom } from 'jokits';
 import joki from '../joki';
-import { log, debug } from '../tools/jokitsLogger';
+import { debug } from '../tools/jokitsLogger';
 
 export default function useAtom<T>(
     atomId: string,

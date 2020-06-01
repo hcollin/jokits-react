@@ -21,14 +21,17 @@ import {
     JokiServiceApi,
     JokiEvent,
     JokiSubscriber,
+    JokiSubscriberOnce,
     JokiServiceFactory,
     JokiMachineState,
     JokiState,
     JokiInterceptor,
     JokiService,
+    JokiConfigs,
 } from 'jokits';
-import { JokiConfigs } from 'jokits/dist/createJoki';
+// import { JokiConfigs } from 'jokits/dist/createJoki';
 import { toggleLogging } from './tools/jokitsLogger';
+import useSetAtom from './atoms/useSetAtom';
 
 function config(key: keyof JokiConfigs, value: string) {
     joki.config(key, value);
@@ -38,11 +41,20 @@ function trigger(event: JokiEvent) {
     joki.trigger(event);
 }
 
+function on(subscriber: JokiSubscriber) {
+    return joki.on(subscriber);
+}
+
+function once(subscriber: JokiSubscriberOnce) {
+    return joki.once(subscriber);
+}
+
 export {
     joki,
     toggleLogging,
     useAtom,
     useAtomValue,
+    useSetAtom,
     useService,
     addService,
     serviceGetState,
@@ -58,6 +70,8 @@ export {
     setJokiState,
     config,
     trigger,
+    on,
+    once,
     JokiConfigs,
     JokiEvent,
     JokiSubscriber,
