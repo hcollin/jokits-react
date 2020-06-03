@@ -21,13 +21,13 @@ import {
     JokiServiceApi,
     JokiEvent,
     JokiSubscriber,
-    JokiSubscriberOnce,
     JokiServiceFactory,
     JokiMachineState,
     JokiState,
     JokiInterceptor,
     JokiService,
     JokiConfigs,
+    JokiSubscriberOnce,
 } from 'jokits';
 // import { JokiConfigs } from 'jokits/dist/createJoki';
 import { toggleLogging } from './tools/jokitsLogger';
@@ -72,6 +72,9 @@ export {
     trigger,
     on,
     once,
+};
+
+export type {
     JokiConfigs,
     JokiEvent,
     JokiSubscriber,

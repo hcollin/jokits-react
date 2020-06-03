@@ -2,7 +2,6 @@ import { useState, useEffect, useCallback } from 'react';
 import joki from '../joki';
 import { JokiEvent } from 'jokits';
 
-
 export default function useService<T>(
     serviceId: string,
     name?: string
@@ -17,9 +16,8 @@ export default function useService<T>(
             from: serviceId,
             action: 'ServiceStateUpdated',
             fn: (event: JokiEvent) => {
-                if (event.data) {
-                    setServiceState(event.data);
-                }
+                const keys = Object.keys(event);
+                if (keys.includes('data')) setServiceState(event.data);
             },
         });
 
