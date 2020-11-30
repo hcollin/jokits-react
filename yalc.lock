@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "jokits": {
+      "signature": "b73a937722aaf51b6fa773e44c2c721d",
+      "file": true,
+      "replaced": "^0.4.1"
+    }
+  }
+}

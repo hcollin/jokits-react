@@ -16,16 +16,8 @@ import {
     setJokiState,
 } from './states/stateMachine';
 import {
-    JokiInstance,
-    JokiInternalApi,
-    JokiServiceApi,
     JokiEvent,
     JokiSubscriber,
-    JokiServiceFactory,
-    JokiMachineState,
-    JokiState,
-    JokiInterceptor,
-    JokiService,
     JokiConfigs,
     JokiSubscriberOnce,
 } from 'jokits';
@@ -72,18 +64,4 @@ export {
     trigger,
     on,
     once,
-};
-
-export type {
-    JokiConfigs,
-    JokiEvent,
-    JokiSubscriber,
-    JokiServiceFactory,
-    JokiInstance,
-    JokiMachineState,
-    JokiState,
-    JokiInterceptor,
-    JokiInternalApi,
-    JokiServiceApi,
-    JokiService,
 };

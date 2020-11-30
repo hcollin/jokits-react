@@ -1,5 +1,5 @@
 import joki from '../joki';
-import { JokiServiceFactory } from 'jokits';
+import { JokiServiceFactory, JokiServiceStatus } from 'jokits';
 
 export function addService<T>(service: JokiServiceFactory<T>) {
     joki.service.add(service);
@@ -11,4 +11,8 @@ export function removeService(serviceId: string) {
 
 export function serviceGetState<T>(serviceId: string): T {
     return joki.service.getState(serviceId);
+}
+
+export function serviceGetStatus(serviceId: string): JokiServiceStatus {
+    return joki.service.getStatus(serviceId);
 }
